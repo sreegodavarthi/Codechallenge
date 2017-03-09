@@ -11,15 +11,14 @@
 
 <body>
     <header>
-        Showing even numbers from the given array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 112, 113] 
+        Showing even numbers from the given array  
     </header>
-
+    
     <div ng-controller="myCtrl">
     <div data-ng-repeat="number in numbers | filter:filterEvenStartFrom(0)">
         <div ng-bind="number"></div>
     </div>
-    </div>
-   
+    </div>   
 </body>
 
 </html>
