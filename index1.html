@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Challenge</title>
+</head>
+
+<body>
+    <header>
+        Showing even numbers from the given array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 112, 113] 
+    </header>
+    <p id = "even"></p>
+    
+    <script>
+        var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 112, 113]  ;
+        a = (function (a) { 
+            if( ! a.length ) return [] ;
+            var firstnum = a.shift();
+            a = arguments.callee(a);
+            if (firstnum % 2 === 0 ) a.unshift(firstnum);
+            return a;
+        }(a));
+        document.getElementById("even").innerHTML = a;
+    </script>
+</body>
+</html>
+
